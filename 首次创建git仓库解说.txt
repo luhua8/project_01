@@ -1,3 +1,9 @@
 1.在当前目录下右击鼠标，选择git bash here，输入git init 就会在当前文件夹下产生一个空的.git文件夹，
 但这个文件夹是隐藏的需要查看隐藏文件夹才能看到它
 2.这个.git文件就是当前项目的Git仓库，里面包含了初始的必要文件，这些文件是Git仓库的必要组成成分。
+3.如果出现fatal: bad config line 1 in file .git/config错误，解决办法就是找到隐藏的.git文件夹里的config文件并删掉它，
+然后冲新配置用户名和邮箱，并初始化一下，即在git bash中输入：
+git config --global user.name "用户名"
+git config --global user.email "邮箱"
+git init
+然后刚刚删掉的config文件会重新出现。
